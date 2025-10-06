@@ -1,0 +1,11 @@
+Fs=1000;
+t=0:1/Fs:1-1/Fs;
+f=5 ;
+x=fft(sin(2*pi*f*t));
+n=length(x);
+f=(0:n-1)*(Fs/n);
+magnitude=abs(x)/n;
+plot(f,magnitude);
+title('FFT of Sine Wave');
+xlabel('Frequency(Hz');
+ylabel('Magnitude');
