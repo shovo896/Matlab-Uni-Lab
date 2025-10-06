@@ -1,0 +1,11 @@
+t=0:0.01:1;
+Vi=(5*sin(2*pi*50*t));
+Vd=0.7;
+Vo=Vi;
+Vo(Vi>Vd)=Vd;
+Vo(Vi<Vd)=-Vd;
+plot(t,Vi,t,Vo);
+title('Diode coupler circuit');
+xlabel('Time(s)');
+ylabel('Voltage(v)');
+legend('Input voltage','output voltage');
